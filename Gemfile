@@ -27,11 +27,35 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# vazgeçilmezler
+gem 'active_link_to'
+gem 'airbrake'
+gem 'better_errors'
+gem 'bootstrap', '~> 4.0.0'
+gem 'chart-js-rails'
+# gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'image_processing'
+gem 'devise'
+gem 'font-awesome-sass', '~> 5.2.0'
+gem 'humanize'
+gem 'iletimerkezisms'
+gem 'jquery-rails'
+gem 'pry'
+gem 'rails-settings-cached'
+gem 'ruby-progressbar'
+gem 'simple_form'
+gem 'slim'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# image processing
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

@@ -1,0 +1,88 @@
+/*
+  * Manifest file for panel pages.
+  *= require coreui
+*/
+@import "toastr/build/toastr.min";
+
+@import "font-awesome-sprockets";
+@import "select2/dist/css/select2.min";
+@import "font-awesome";
+.cat_grid {
+  .list-group {
+    .list-group-item {
+      padding: .45rem 1.25rem;
+    }
+  }
+}
+
+span.select2 {
+  width: 100% !important;
+}
+
+.scroll-col {
+  float: left;
+  min-width: 400px;
+  width: 100%;
+  margin: 0 .3rem;
+  margin-bottom: 1rem;
+  height: auto;
+  max-height: 345px;
+  overflow-x: hidden;
+}
+
+.move_left {
+  float: left;
+  padding-left: 2px;
+}
+
+.move_right {
+  float: right;
+  padding-right: 2px;
+}
+
+.image_select_area {
+  height: 100px;
+  background: antiquewhite;
+  padding: 30px 10px;
+  border: 2px dashed #7b5526;
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+  }
+
+  .drag_text {
+    font-size: 15pt;
+    text-align: center;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.is-dragover {
+  background: #fff9f1 !important;
+}
+
+
+#upload_images {
+  margin-top: 20px;
+
+  .item {
+    text-align: center;
+    float: left;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    width: 129px;
+    height: auto;
+    padding: 0 1px 1px 0;
+    margin: 0 10px 37px 0;
+    position: relative;
+  }
+
+  span {
+    font-size: 8pt;
+  }
+}

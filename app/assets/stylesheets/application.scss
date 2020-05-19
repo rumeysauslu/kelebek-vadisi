@@ -1,0 +1,14 @@
+@import "bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css";
+@import "toastr/build/toastr.min";
+@import "owl.carousel2/dist/assets/owl.carousel.min.css";
+@import "owl.carousel2/dist/assets/owl.theme.default.min.css";
+@import "lightgallery/dist/css/lightgallery.css";
+
+@import "swiper/css/swiper.min.css";
+ 
+.field_with_errors{
+  .error{
+    font-size: 11px;
+    color: red;
+  }
+}
