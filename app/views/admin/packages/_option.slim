@@ -1,0 +1,6 @@
+tr.element
+  td =f.input :child_size, label: false
+  td =f.input :price, label: false
+  td
+    = f.input_field :_destroy, as: :hidden
+    = link_to 'Sil', '#', class: 'remove_record btn btn-danger'

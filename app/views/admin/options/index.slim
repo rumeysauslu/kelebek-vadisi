@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-archive
+        =t('.card_header')
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.package')
+              th =t('.child_size')
+              th =t('.price')
+              th #
+          tbody
+            -@options.each do |opt|
+              tr
+                td ="#{opt.package.len} " "#{t(".periods.#{opt.package.period}")}"
+                td =opt.child_size
+                td =number_to_currency opt.price
+                td
+                  =link_to_destroy admin_option_path(opt)

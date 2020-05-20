@@ -1,0 +1,19 @@
+tr:
+  activerecord:
+    models:
+      option: Seçenek
+    attributes:
+      option: &option_attributes
+        id: Id
+        child_size: Çocuk Sayısı
+        price: Fiyatı
+        package: Paket Süresi
+        periods:
+          minutes: Dakika
+          month: Ay
+
+  admin:
+    options:
+      index:
+        <<: *option_attributes
+        card_header: Seçenekler

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :parents
       resources :children
       resources :packages
+      resources :options
     end
   end
 end

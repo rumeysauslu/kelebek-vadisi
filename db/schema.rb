@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_214402) do
+ActiveRecord::Schema.define(version: 2020_05_20_222730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2020_05_20_214402) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["parent_id"], name: "index_children_on_parent_id"
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.bigint "package_id"
+    t.integer "child_size", default: 1
+    t.decimal "price", precision: 10, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["package_id"], name: "index_options_on_package_id"
   end
 
   create_table "packages", force: :cascade do |t|
@@ -57,5 +66,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_214402) do
   end
 
   add_foreign_key "children", "parents"
+  add_foreign_key "options", "packages"
   add_foreign_key "parents", "users"
 end

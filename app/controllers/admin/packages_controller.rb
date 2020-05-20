@@ -33,7 +33,9 @@ module Admin
     end
 
     def package_params
-      params.require(:package).permit(:p_type, :name, :period, :len)
+      params.require(:package).permit(
+        :p_type, :name, :period, :len,
+        options_attributes: Option.attribute_names.map(&:to_sym).push(:_destroy))
     end
   end
 end

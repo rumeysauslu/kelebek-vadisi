@@ -3,7 +3,25 @@
     .col-md-6
       =f.input :name
       =f.input :p_type, collection: Package::TYPES.map{|i| [t(".types.#{i}"), i]}, include_blank: false
+    .col-md-6
       =f.input :len
       =f.input :period, collection: Package::PERIODS.map{|i| [t(".periods.#{i}"), i]}, include_blank: false
+    .col-md-12
+      hr
+      h5 Seçenekler
+      .form-group
+        table.table
+          thead
+            tr
+              th Çocuk Sayısı
+              th Fiyatı
+              th #
+          tbody.fields
+            = f.simple_fields_for :options do |opt|
+              = render 'option', f: opt
+          tfoot
+            tr
+              td colspan="6" style="text-align: center;" 
+                = link_to_add_row('Yeni Seçenek Ekle', f, :options, class: 'btn btn-success btn-sm')
     .col-md-12
       =f.submit class: 'btn btn-primary btn-xs'
