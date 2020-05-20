@@ -7,12 +7,6 @@ module Admin
       @children = Child.order(id: :desc)
     end
 
-    def edit;end
-
-    def update
-      @child.update ? redirect_to(admin_children_path, notice: 'Çocuk bilgileri güncellendi') : render(:edit)
-    end
-
     def destroy
       @child.destroy ? redirect_to(admin_children_path, notice: 'Çocuk kaydı silindi') : redirect_to(admin_children_path, alert: 'Çocuk kaydı silinemedi')
     end

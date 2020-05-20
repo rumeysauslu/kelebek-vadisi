@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Parent < ApplicationRecord
+  # relations
   belongs_to :user
   has_many :children
 
