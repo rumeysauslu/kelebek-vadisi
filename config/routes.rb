@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     scope 'admin', module: 'admin', as: 'admin' do
       get '/', to: 'home#index', as: 'root'
       resources :parents
+      resources :children
     end
   end
 end

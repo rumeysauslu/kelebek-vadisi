@@ -1,11 +1,26 @@
 =simple_form_for @parent, url: path do |f|
   .row
-    .col-md-4
+    .col-md-6
       =f.input :name
-    .col-md-4
       =f.input :phone
-    .col-md-4
       label Doğum Tarihi
       =f.date_field :birth, class: 'form-control datepicker', autocomplete: 'off'
+    .col-md-6
+      h5 Çocuklar
+      .form-group
+        table.table
+          thead
+            tr
+              th Adı-Soyadı
+              th Doğum Tarihi
+              th #
+          tbody.fields
+            = f.simple_fields_for :children do |child|
+              = render 'child', f: child
+          tfoot
+            tr
+              td colspan="6" style="text-align: center;" 
+                = link_to_add_row('Yeni Çocuk Ekle', f, :children, class: 'btn btn-success btn-sm')
     .col-md-12
-      =f.submit t('save'), class: 'btn btn-primary'
+      hr
+      =f.submit class: 'btn btn-primary btn-xs'

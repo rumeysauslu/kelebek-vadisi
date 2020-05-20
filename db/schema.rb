@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_112620) do
+ActiveRecord::Schema.define(version: 2020_05_20_114900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "children", force: :cascade do |t|
+    t.string "name"
+    t.date "birth"
+    t.bigint "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_children_on_parent_id"
+  end
 
   create_table "parents", force: :cascade do |t|
     t.string "name"
@@ -38,5 +47,6 @@ ActiveRecord::Schema.define(version: 2020_05_20_112620) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "children", "parents"
   add_foreign_key "parents", "users"
 end

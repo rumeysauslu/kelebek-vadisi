@@ -13,8 +13,7 @@ module Admin
 
     def create
       @parent = Parent.new(parent_params)
-      @user = User.create(email: "#{@parent.phone}@kelebek.vadisi", phone: @parent.phone, password: [*('A'..'Z'),*('0'..'9')].shuffle[0,8].join)
-      @parent.user_id = @user.id
+      @parent.user = User.new(email: "#{@parent.phone}@kelebek.vadisi", phone: @parent.phone, password: [*('A'..'Z'),*('0'..'9')].shuffle[0,8].join)
       @parent.save ? redirect_to(admin_parents_path, notice: 'Yeni veli oluşturuldu') : render(:new)
     end
 
@@ -35,7 +34,10 @@ module Admin
     end
 
     def parent_params
-      params.require(:parent).permit(:name, :phone, :birth, :user_id)
+      params.require(:parent).permit(
+        :name, :phone, :birth, :user_id,
+        children_attributes: Child.attribute_names.map(&:to_sym).push(:_destroy)
+      )
     end
   end
 end

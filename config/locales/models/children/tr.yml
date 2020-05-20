@@ -1,0 +1,17 @@
+tr:
+  activerecord:
+    models:
+      child: Çocuk
+    attributes:
+      child: &child_attributes
+        id: Id
+        name: Adı-Soyadı
+        birth: Doğum Tarihi
+        parent: Veli
+        parent_phone: Veli Telefonu
+
+  admin:
+    children:
+      index:
+        <<: *child_attributes
+        card_header: Çocuklar

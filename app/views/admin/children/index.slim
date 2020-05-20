@@ -1,0 +1,25 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-user
+        =t('.card_header')
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.name')
+              th =t('.birth')
+              th =t('.parent')
+              th =t('.parent_phone')
+              th #
+          tbody
+            -@children.each do |child|
+              tr
+                td =child.name
+                td =child.birth
+                td =child.parent.name
+                td =child.parent.phone
+                td
+                  =link_to_destroy admin_child_path(child)

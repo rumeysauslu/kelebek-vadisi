@@ -1,0 +1,21 @@
+tr:
+  activerecord:
+    models:
+      parent: Veli
+    attributes:
+      parent: &parent_attributes
+        id: Id
+        name: Adı-Soyadı
+        birth: Doğum Tarihi
+        phone: Telefonu
+
+  admin:
+    parents:
+      index:
+        <<: *parent_attributes
+        card_header: Veliler
+        new_parent_link: Yeni Veli Ekle
+      new:
+        title: Yeni Veli Ekle
+      edit:
+        title: Veli Bilgilerini Düzenle
