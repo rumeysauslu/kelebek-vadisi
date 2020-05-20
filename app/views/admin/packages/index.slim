@@ -1,0 +1,29 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-archive
+        =t('.card_header')
+        =link_to new_admin_package_path, class: 'btn btn-sm btn-success float-right' do
+          i.fa.fa-plus
+          |&nbsp;#{t('.new_package_link')}
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.name')
+              th =t('.p_type')
+              th =t('.len')
+              th #
+          tbody
+            -@packages.each do |package|
+              tr
+                td =package.name
+                td =t(".types.#{package.p_type}")
+                td ="#{package.len} " "#{t(".periods.#{package.period}")}"
+                 
+                td
+                  =link_to_edit edit_admin_package_path(package)
+                  |&nbsp;
+                  =link_to_destroy admin_package_path(package)

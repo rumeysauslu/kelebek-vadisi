@@ -1,0 +1,28 @@
+tr:
+  activerecord:
+    models:
+      package: Paket
+    attributes:
+      package: &package_attributes
+        id: Id
+        name: İsmi
+        period: Zamanı
+        len: Süresi
+        p_type: Türü
+        types:
+          standard: Tek Seferlik Paket
+          subscriptions: Abonelik Paket
+        periods:
+          minutes: Dakika
+          month: Ay
+
+  admin:
+    packages:
+      index:
+        <<: *package_attributes
+        card_header: Paketler
+        new_package_link: Yeni Paket Ekle
+      new:
+        title: Yeni Paket Ekle
+      edit:
+        title: Paket Bilgilerini Düzenle

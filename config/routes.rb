@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/', to: 'home#index', as: 'root'
       resources :parents
       resources :children
+      resources :packages
     end
   end
 end
