@@ -1,0 +1,8 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-user
+        =t('.title')
+      .card-body
+        =render 'form', path: admin_parent_path(@parent)

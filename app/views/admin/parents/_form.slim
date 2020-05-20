@@ -1,0 +1,11 @@
+=simple_form_for @parent, url: path do |f|
+  .row
+    .col-md-4
+      =f.input :name
+    .col-md-4
+      =f.input :phone
+    .col-md-4
+      label Doğum Tarihi
+      =f.date_field :birth, class: 'form-control datepicker', autocomplete: 'off'
+    .col-md-12
+      =f.submit t('save'), class: 'btn btn-primary'
