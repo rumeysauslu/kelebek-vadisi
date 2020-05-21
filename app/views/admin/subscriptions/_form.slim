@@ -1,0 +1,3 @@
+=simple_form_for @subscription, url: path do |f|
+  =f.input :option_id, collection: Option.all.map{|i| [i.child_size, i.id]}, include_blank: false
+  =f.submit class: 'btn btn-primary btn-xs'

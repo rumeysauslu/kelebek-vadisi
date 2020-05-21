@@ -1,0 +1,23 @@
+tr:
+  activerecord:
+    models:
+      subscription: Abonelik
+    attributes:
+      subscription: &subscription_attributes
+        id: Id
+        parent: Veli
+        package: Tanımlanan Paket
+        p_type: Paketin Türü
+        price: Ücreti
+        created_at: Paketin Tanımlanma Zamanı
+        types:
+          standard: Tek Seferlik Paket
+          subscriptions: Aylık Paket
+
+  admin:
+    subscriptions:
+      index:
+        <<: *subscription_attributes
+        card_header: Abonelikler
+      new:
+        title: için Yeni Paket Seçimi

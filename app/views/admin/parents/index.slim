@@ -23,6 +23,8 @@
                 td =parent.phone
                 td =parent.birth
                 td
+                  =link_to 'Yeni Paket Tanımla', admin_parent_new_subscription_path(parent), class: 'btn btn-info btn-sm'
+                  |&nbsp;
                   =link_to_edit edit_admin_parent_path(parent)
                   |&nbsp;
                   =link_to_destroy admin_parent_path(parent)
