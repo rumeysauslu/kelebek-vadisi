@@ -2,7 +2,7 @@
 
 class Package < ApplicationRecord
   TYPES = %i[standard subscriptions].freeze
-  PERIODS = %i[minutes month].freeze
+  PERIODS = %i[minute month].freeze
 
   # relations
   has_many :options

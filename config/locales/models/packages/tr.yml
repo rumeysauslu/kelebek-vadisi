@@ -13,7 +13,7 @@ tr:
           standard: Tek Seferlik Paket
           subscriptions: Abonelik Paket
         periods:
-          minutes: Dakika
+          minute: Dakika
           month: Ay
 
   admin:

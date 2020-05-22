@@ -10,6 +10,7 @@
           thead
             tr
               th =t('.parent')
+              th =t('.child')
               th =t('.package')
               th =t('.p_type')
               th =t('.price')
@@ -18,8 +19,9 @@
           tbody
             -@subscriptions.each do |subs|
               tr
-                td =subs.parent.name
-                td =subs.option.package.name
+                td =subs.child.parent.name
+                td =subs.child.name
+                td =subs.option.name
                 td =t(".types.#{subs.option.package.p_type}")
                 td =number_to_currency subs.option.price
                 td =time_tag subs.created_at

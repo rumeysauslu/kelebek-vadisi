@@ -11,6 +11,10 @@ module Admin
       @child.destroy ? redirect_to(admin_children_path, notice: 'Çocuk kaydı silindi') : redirect_to(admin_children_path, alert: 'Çocuk kaydı silinemedi')
     end
 
+    def show
+      @children = Parent.find(params[:parent_id]).children
+    end
+
     private
 
     def set_child

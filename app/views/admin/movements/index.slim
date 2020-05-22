@@ -16,7 +16,7 @@
           tbody
             -@movements.each do |mov|
               tr
-                td =mov.subscription.parent.name
-                td =mov.subscription.option.package.name
+                td =mov.subscription.child.parent.name
+                td =mov.subscription.option.name
                 td =number_to_currency mov.amount
                 td =time_tag mov.created_at

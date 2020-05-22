@@ -1,0 +1,25 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-child
+        =t('.card_header')
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.name')
+              th =t('.birth')
+              th =t('.package')
+              th #
+          tbody
+            -@children.each do |child|
+              tr
+                td =child.name
+                td =child.birth
+                -unless child.options.empty?
+                  td =child.options.last.package.name
+                  
+                td
+                  =link_to 'Paket Tanımla', admin_child_new_subscription_path(child), class: 'btn btn-info btn-sm'

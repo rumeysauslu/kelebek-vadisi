@@ -2,7 +2,7 @@
 
 class Subscription < ApplicationRecord
   # relations
-  belongs_to :parent
+  belongs_to :child
   belongs_to :option
 
   # callbacks

@@ -1,10 +1,10 @@
 .row
-  .col-lg-12
+  .col-lg-6
     .card
       .card-header
         i.fa.fa-id-card
-        =@parent.name
+        =@child.name
         |&nbsp;
         =t('.title')
       .card-body
-        =render 'form', path:  admin_parent_create_subscription_path
+        =render 'form', path:  admin_child_create_subscription_path

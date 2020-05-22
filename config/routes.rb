@@ -6,10 +6,12 @@ Rails.application.routes.draw do
     scope 'admin', module: 'admin', as: 'admin' do
       get '/', to: 'home#index', as: 'root'
       resources :parents do
+        get '/cocuklar', to: 'children#show', as: 'show_children'
+      end
+      resources :children do
         get '/paket-tanimla', to: 'subscriptions#new', as: 'new_subscription'
         post '/paket-tanimla', to: 'subscriptions#create', as: 'create_subscription'
       end
-      resources :children
       resources :packages
       resources :options
       resources :subscriptions

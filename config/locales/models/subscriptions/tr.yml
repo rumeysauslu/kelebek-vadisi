@@ -6,7 +6,9 @@ tr:
       subscription: &subscription_attributes
         id: Id
         parent: Veli
+        child: Çocuk
         package: Tanımlanan Paket
+        option_id: Paket
         p_type: Paketin Türü
         price: Ücreti
         created_at: Paketin Tanımlanma Zamanı
@@ -20,4 +22,5 @@ tr:
         <<: *subscription_attributes
         card_header: Abonelikler
       new:
+        <<: *subscription_attributes
         title: için Yeni Paket Seçimi

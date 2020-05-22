@@ -4,8 +4,6 @@ class Parent < ApplicationRecord
   # relations
   belongs_to :user
   has_many :children
-  has_many :subscriptions, dependent: :destroy
-  has_many :options, through: :subscriptions
 
   # validations
   validates :name, presence: true

@@ -9,7 +9,7 @@ tr:
         price: Fiyatı
         package: Paket Süresi
         periods:
-          minutes: Dakika
+          minute: Dakika
           month: Ay
 
   admin:

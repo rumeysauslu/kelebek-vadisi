@@ -9,9 +9,13 @@ tr:
         birth: Doğum Tarihi
         parent: Veli
         parent_phone: Veli Telefonu
+        package: Son Tanımlanan Paket
 
   admin:
     children:
       index:
+        <<: *child_attributes
+        card_header: Çocuklar
+      show:
         <<: *child_attributes
         card_header: Çocuklar
