@@ -33,11 +33,24 @@
     .card
       .card-header Günlük Kayıt Sayısı
       .card-body
-          =column_chart [ {name: "Kayıt Sayısı", data: Movement.group_by_day_of_week(:created_at, format: "%a").count}]
-          
+          =column_chart [ {name: "Kayıt Sayısı", data: Movement.group_by_day_of_week(:created_at, format: '%a').count}]
 .row
   .col-12
     .card
       .card-header Günlük Kayıt Miktarı
       .card-body
-        =column_chart [ {name: "Miktar ₺", data: Movement.group_by_day_of_week(:created_at, format: "%a").sum(:amount)}]
+        =column_chart [ {name: "Miktar ₺", data: Movement.group_by_day_of_week(:created_at, format: '%a').sum(:amount)}]
+
+.row
+  .col-12
+    .card
+      .card-header Aylık Kayıt Sayısı
+      .card-body
+          =column_chart [ {name: "Kayıt Sayısı", data: Movement.group_by_day_of_month(:created_at, format: '%d').count}]
+          
+.row
+  .col-12
+    .card
+      .card-header Aylık Kayıt Miktarı
+      .card-body
+        =column_chart [ {name: "Miktar ₺", data: Movement.group_by_day_of_month(:created_at, format: '%d').sum(:amount)}]
