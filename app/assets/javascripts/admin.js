@@ -8,7 +8,8 @@
 
 //= require datatables.net/js/jquery.dataTables
 //= require_self
-
+//= require chartkick/dist/chartkick.js
+//= require Chart.bundle
 
 $(document).ready(function () {
   $('#add_stage').change(function(){

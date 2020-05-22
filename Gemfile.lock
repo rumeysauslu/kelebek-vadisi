@@ -92,8 +92,7 @@ GEM
       image_processing (~> 1.1)
       mimemagic (>= 0.3.0)
       mini_mime (>= 0.1.3)
-    chart-js-rails (0.1.7)
-      railties (> 3.1)
+    chartkick (3.0.1)
     childprocess (3.0.0)
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
@@ -125,6 +124,8 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (4.0.1)
+      activesupport (>= 4.2)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -308,12 +309,13 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave
-  chart-js-rails
+  chartkick
   chromedriver-helper
   ckeditor!
   coffee-rails (~> 4.2)
   devise
   font-awesome-sass (~> 5.2.0)
+  groupdate
   humanize
   iletimerkezisms
   image_processing

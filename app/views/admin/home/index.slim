@@ -27,3 +27,17 @@
         div
           .text-value-sm.text-danger =Option.count
           .text-muted.text-uppercase.font-weight-bold.small TOPLAM PAKET
+
+.row
+  .col-12
+    .card
+      .card-header Günlük Kayıt Sayısı
+      .card-body
+          =column_chart [ {name: "Kayıt Sayısı", data: Movement.group_by_day_of_week(:created_at, format: "%a").count}]
+          
+.row
+  .col-12
+    .card
+      .card-header Günlük Kayıt Miktarı
+      .card-body
+        =column_chart [ {name: "Miktar ₺", data: Movement.group_by_day_of_week(:created_at, format: "%a").sum(:amount)}]
