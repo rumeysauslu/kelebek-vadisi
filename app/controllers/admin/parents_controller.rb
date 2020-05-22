@@ -20,6 +20,7 @@ module Admin
     def edit;end
 
     def update
+      pry
       @parent.update(parent_params) ? redirect_to(admin_parents_path, notice: 'Veli güncellendi') : render(:edit)
     end
 

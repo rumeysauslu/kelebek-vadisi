@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Package < ApplicationRecord
-  TYPES = %i[standard subscriptions].freeze
+  TYPES = %i[standard monthly].freeze
   PERIODS = %i[minute month].freeze
 
   # relations

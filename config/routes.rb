@@ -11,11 +11,13 @@ Rails.application.routes.draw do
       resources :children do
         get '/paket-tanimla', to: 'subscriptions#new', as: 'new_subscription'
         post '/paket-tanimla', to: 'subscriptions#create', as: 'create_subscription'
+        post '/oturum-baslat', to: 'sessions#start_session', as: 'new_session'
       end
       resources :packages
       resources :options
       resources :subscriptions
       resources :movements, only: [:index]
+      resources :sessions, only: [:index]
     end
   end
 end

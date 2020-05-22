@@ -12,9 +12,10 @@ tr:
         p_type: Paketin Türü
         price: Ücreti
         created_at: Paketin Tanımlanma Zamanı
+        end_time: Paketin Bitiş Zamanı
         types:
           standard: Tek Seferlik Paket
-          subscriptions: Aylık Paket
+          monthly: Aylık Paket
 
   admin:
     subscriptions:

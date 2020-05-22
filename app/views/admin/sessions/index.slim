@@ -1,0 +1,26 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-clock
+        =t('.card_header')
+      
+      .card-body
+        table.table.datatable
+          thead
+            tr
+              th =t('.child')
+              th =t('.parent')
+              th =t('.phone')
+              th =t('.checkin_time')
+              th =t('.checkout_time')
+              th =t('.remaining_time')
+          tbody
+            -@sessions.each do |session|
+              tr
+                td =session.child.name
+                td =session.child.parent.name
+                td =number_to_phone session.child.parent.phone
+                td =time_tag session.checkin_time
+                td =time_tag session.checkout_time
+                td =distance_of_time_in_words(session.checkout_time, Time.zone.now)

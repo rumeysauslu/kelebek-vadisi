@@ -15,7 +15,7 @@
               th =t('.p_type')
               th =t('.price')
               th =t('.created_at')
-              th #
+              th =t('.end_time')
           tbody
             -@subscriptions.each do |subs|
               tr
@@ -25,4 +25,4 @@
                 td =t(".types.#{subs.option.package.p_type}")
                 td =number_to_currency subs.option.price
                 td =time_tag subs.created_at
-                td
+                td =time_tag subs.end_time

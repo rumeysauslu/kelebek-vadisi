@@ -11,7 +11,7 @@ tr:
         p_type: Türü
         types:
           standard: Tek Seferlik Paket
-          subscriptions: Abonelik Paket
+          monthly: Aylık Paket
         periods:
           minute: Dakika
           month: Ay

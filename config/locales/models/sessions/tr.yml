@@ -1,0 +1,20 @@
+tr:
+  activerecord:
+    models:
+      session: Oturum
+    attributes:
+      session: &session_attributes
+        id: Id
+        parent: Veli
+        child: Çocuk
+        package: Tanımlanan Paket
+        phone: Telefon
+        checkin_time: Başlangıç
+        checkout_time: Bitiş
+        remaining_time: Kalan Süre
+
+  admin:
+    sessions:
+      index:
+        <<: *session_attributes
+        card_header: Oturumlar

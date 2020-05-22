@@ -20,6 +20,11 @@
                 td =child.birth
                 -unless child.options.empty?
                   td =child.options.last.name
-                  
                 td
-                  =link_to 'Paket Tanımla', admin_child_new_subscription_path(child), class: 'btn btn-info btn-sm'
+                  |&nbsp;
+                  -if !child.packages.last.nil? && child.packages.last.monthly?
+                    =link_to 'Oturumu Başlat', admin_child_new_session_path(child), class: 'btn btn-success btn-sm', method: :post
+                    =distance_of_time_in_words(child.subscriptions.last.end_time, Time.zone.now)
+                  -else
+                    =link_to 'Paket Tanımla', admin_child_new_subscription_path(child), class: 'btn btn-info btn-sm'
+                  
