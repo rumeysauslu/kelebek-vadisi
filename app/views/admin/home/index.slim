@@ -2,28 +2,28 @@
   .col-6.col-lg-3
     .card
       .card-body.p-3.d-flex.align-items-center
-        i.fa.fa-shopping-basket.bg-primary.p-3.font-2xl.mr-3
+        i.fa.fa-lira-sign.bg-primary.p-3.font-2xl.mr-3
         div
-          .text-value-sm.text-primary
-          .text-muted.text-uppercase.font-weight-bold.small TOPLAM SİPARİŞ
+          .text-value-sm.text-primary =number_to_currency @amounts
+          .text-muted.text-uppercase.font-weight-bold.small KASA
   .col-6.col-lg-3
     .card
       .card-body.p-3.d-flex.align-items-center
         i.fa.fa-users.bg-success.p-3.font-2xl.mr-3
         div
-          .text-value-sm.text-success 
-          .text-muted.text-uppercase.font-weight-bold.small TOPLAM ÜYE
+          .text-value-sm.text-success =Parent.count
+          .text-muted.text-uppercase.font-weight-bold.small TOPLAM VELİ
   .col-6.col-lg-3
     .card
       .card-body.p-3.d-flex.align-items-center
-        i.fa.fa-tag.bg-warning.p-3.font-2xl.mr-3
+        i.fa.fa-child.bg-warning.p-3.font-2xl.mr-3
         div
-          .text-value-sm.text-warning 
-          .text-muted.text-uppercase.font-weight-bold.small TOPLAM İLAN
+          .text-value-sm.text-warning =Child.count
+          .text-muted.text-uppercase.font-weight-bold.small TOPLAM ÇOCUK
   .col-6.col-lg-3
     .card
       .card-body.p-3.d-flex.align-items-center
-        i.fa.fa-list.bg-danger.p-3.font-2xl.mr-3
+        i.fa.fa-archive.bg-danger.p-3.font-2xl.mr-3
         div
-          .text-value-sm.text-danger
-          .text-muted.text-uppercase.font-weight-bold.small TOPLAM KATEGORİ
+          .text-value-sm.text-danger =Option.count
+          .text-muted.text-uppercase.font-weight-bold.small TOPLAM PAKET

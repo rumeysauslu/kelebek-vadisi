@@ -2,6 +2,8 @@
 
 module Admin
   class HomeController < AdminController
-    def index; end
+    def index
+      @amounts = Movement.all.sum(&:amount)
+    end
   end
 end

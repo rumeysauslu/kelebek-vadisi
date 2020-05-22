@@ -14,7 +14,6 @@ module Admin
     def create
       @parent = Parent.new(parent_params)
       @parent.user = User.new(email: "#{@parent.phone}@kelebek.vadisi", phone: @parent.phone, password: [*('A'..'Z'),*('0'..'9')].shuffle[0,8].join)
-      pry
       @parent.save ? redirect_to(admin_parents_path, notice: 'Yeni veli oluşturuldu') : render(:new)
     end
 

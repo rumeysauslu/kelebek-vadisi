@@ -3,7 +3,7 @@
 class Parent < ApplicationRecord
   # relations
   belongs_to :user
-  has_many :children
+  has_many :children, dependent: :destroy
 
   # validations
   validates :name, presence: true
