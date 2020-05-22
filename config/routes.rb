@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :packages
       resources :options
       resources :subscriptions
+      resources :movements, only: [:index]
     end
   end
 end

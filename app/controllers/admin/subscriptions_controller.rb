@@ -15,7 +15,7 @@ module Admin
     def create
       @subscription = Subscription.new(subscription_params)
       @subscription.parent = Parent.find(params[:parent_id])
-      @subscription.save ? redirect_to(admin_subscription_path, notice: 'Yeni Abonelik Oluşturuldu') : render(:new)
+      @subscription.save ? redirect_to(admin_subscriptions_path, notice: 'Yeni Abonelik Oluşturuldu') : render(:new)
     end
 
     def edit;end

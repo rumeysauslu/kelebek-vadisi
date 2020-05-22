@@ -1,0 +1,22 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-lira-sign
+        =t('.card_header')
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.parent')
+              th =t('.package')
+              th =t('.price')
+              th =t('.created_at')
+          tbody
+            -@movements.each do |mov|
+              tr
+                td =mov.subscription.parent.name
+                td =mov.subscription.option.package.name
+                td =number_to_currency mov.amount
+                td =time_tag mov.created_at

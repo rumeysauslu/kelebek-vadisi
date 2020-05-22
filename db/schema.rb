@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_095203) do
+ActiveRecord::Schema.define(version: 2020_05_21_154147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2020_05_21_095203) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["parent_id"], name: "index_children_on_parent_id"
+  end
+
+  create_table "movements", force: :cascade do |t|
+    t.bigint "subscription_id"
+    t.decimal "amount", precision: 10, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscription_id"], name: "index_movements_on_subscription_id"
   end
 
   create_table "options", force: :cascade do |t|
@@ -75,6 +83,7 @@ ActiveRecord::Schema.define(version: 2020_05_21_095203) do
   end
 
   add_foreign_key "children", "parents"
+  add_foreign_key "movements", "subscriptions"
   add_foreign_key "options", "packages"
   add_foreign_key "parents", "users"
   add_foreign_key "subscriptions", "options"
