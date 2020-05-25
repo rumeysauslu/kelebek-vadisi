@@ -46,6 +46,7 @@ gem 'rails-settings-cached'
 gem 'ruby-progressbar'
 gem 'simple_form'
 gem 'slim'
+gem 'whenever', require: false
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

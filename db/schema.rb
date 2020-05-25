@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_124044) do
+ActiveRecord::Schema.define(version: 2020_05_25_131345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_124044) do
     t.datetime "checkout_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_active", default: false
     t.index ["child_id"], name: "index_sessions_on_child_id"
   end
 
@@ -76,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_05_23_124044) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "end_time"
+    t.boolean "is_active", default: false
     t.index ["child_id"], name: "index_subscriptions_on_child_id"
     t.index ["option_id"], name: "index_subscriptions_on_option_id"
   end
