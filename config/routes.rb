@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       resources :subscriptions
       resources :movements, only: [:index]
       resources :sessions, only: [:index]
+      resources :surveys
     end
+    resources :survey_results, only:[:new,:create]
   end
 end

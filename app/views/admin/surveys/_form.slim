@@ -1,0 +1,4 @@
+=simple_form_for @survey, url: path do |f|
+  =f.input :question
+  =f.input :sequence
+  =f.submit t('save'), class: 'btn btn-primary btn-xs'

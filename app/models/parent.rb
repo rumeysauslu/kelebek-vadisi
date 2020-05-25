@@ -4,6 +4,7 @@ class Parent < ApplicationRecord
   # relations
   belongs_to :user
   has_many :children, dependent: :destroy
+  has_many :survey_results, dependent: :destroy
 
   # validations
   validates :name, presence: true

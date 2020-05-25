@@ -1,0 +1,15 @@
+=form_tag survey_results_path, method: :post do |f|
+  table.table
+    thead
+      tr
+        th #
+        -@options.each do |i|
+          th =i[0]
+    tbody
+      
+      -@questions.each do |o|
+        tr
+          td =o.question
+          -@options.each do |option|
+            td =radio_button_tag "answer[#{o.id}][#{option}]", option
+  =submit_tag 'Sınavı Bitir', class: 'btn btn-info'

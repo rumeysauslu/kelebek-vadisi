@@ -1,0 +1,8 @@
+.row
+  .col-lg-6
+    .card
+      .card-header
+        i.fa.fa-list-ol
+        =t('.title')
+      .card-body
+        =render 'form', path:  admin_survey_path(@survey)
