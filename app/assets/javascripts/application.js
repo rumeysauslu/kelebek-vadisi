@@ -12,6 +12,14 @@
 
 //= require swiper/js/swiper.min.js
 //= require clipboard/dist/clipboard.min.js
+//= require my-app
+//= require jquery.fitvids
+//= require jquery.swipebox
+//= require jquery.validate.min
+//= require classie/lib/classie.js
+//= require framework7/js/framework7.js
+//= require selectfx/selectFx.js
+
 
 $(document).ready(function(){
   $('.datepicker').datepicker();

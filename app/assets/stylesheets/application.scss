@@ -5,6 +5,14 @@
 @import "lightgallery/dist/css/lightgallery.css";
 
 @import "swiper/css/swiper.min.css";
+@import "framework7/css/framework7.css";
+
+/*
+  *= require style
+  *= require animation
+  *= require reset
+  *= require swipebox
+*/
  
 .field_with_errors{
   .error{
