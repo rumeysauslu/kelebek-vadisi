@@ -39,7 +39,7 @@ Template:	UpMobile - Mobile HTML Template
 /*===============================================*/
 /* 1. RESET		 						 */
 /*===============================================*/
-@import "css/reset.css";
+@import "reset.scss";
 
 /*===============================================*/
 /* 2. GENERAL		 						 */
@@ -221,7 +221,7 @@ a.backtoshop {
   position: absolute;
   top: 0px;
   z-index: 999;
-  background: url(images/home-header-menu.png) repeat-x bottom;
+  background: asset_url('home-header-menu.png') repeat-x bottom;
 
   h1 {
     color: #fff;
@@ -854,7 +854,7 @@ ul.toolbar_icons {
   li {
     margin: 0 0 10px 0;
     padding: 0 0 0 20px;
-    background: url(images/bullet.png) no-repeat left;
+    background: asset_url('bullet.png') no-repeat left;
   }
 }
 
@@ -1755,7 +1755,7 @@ a {
     }
 
     &:checked + label {
-      background-image: url(images/bullet.png);
+      background-image: asset_url('bullet.png');
       background-position: center center;
       background-repeat: no-repeat;
     }
@@ -2087,15 +2087,15 @@ a.checkout {
 }
 
 .switch13 {
-  background: url(images/switch_13.png) no-repeat center;
+  background: asset_url('switch_13.png') no-repeat center;
 }
 
 .switch12 {
-  background: url(images/switch_12.png) no-repeat center;
+  background: asset_url('switch_12.png') no-repeat center;
 }
 
 .switch11 {
-  background: url(images/switch_11.png) no-repeat center;
+  background: asset_url('switch_11.png') no-repeat center;
 }
 
 .gallery_switch {
@@ -2301,19 +2301,19 @@ ul {
   padding: 0 5px;
 
   &.post_date {
-    background: url(images/date.png) no-repeat left;
+    background: asset_url('date.png') no-repeat left;
     padding: 10px 0 5px 25px;
     margin: 0 0 0 0;
   }
 
   &.post_author {
-    background: url(images/author.png) no-repeat left;
+    background: asset_url('author.png') no-repeat left;
     padding: 10px 0 5px 25px;
     margin: 0 0 0 10px;
   }
 
   &.post_comments {
-    background: url(images/comments.png) no-repeat left;
+    background: asset_url('comments.png') no-repeat left;
     padding: 10px 0 5px 23px;
     margin: 0 0 0 10px;
   }
@@ -2460,7 +2460,7 @@ ul.comments {
     border-top: none;
     -webkit-appearance: none;
     color: #000000;
-    background: url(images/dropdown.png) no-repeat right;
+    background: asset_url('dropdown.png') no-repeat right;
 
     option {
       padding: 3px;
@@ -2676,7 +2676,7 @@ div.cs-active {
       padding: 10px 5%;
       border-bottom: 1px #ddd solid;
       border-radius: 0px;
-      background: url(images/select_bullet.png) no-repeat right center;
+      background: asset_url('select_bullet.png') no-repeat right center;
     }
   }
 }
@@ -2696,7 +2696,7 @@ div.cs-skin-overlay {
 
 .cs-skin-overlay {
   > span {
-    background: url(images/dropdown.png) no-repeat right center #ffffff;
+    background: asset_url('dropdown.png') no-repeat right center #ffffff;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
@@ -2710,7 +2710,7 @@ div.cs-skin-overlay {
   }
 
   &.cs-active > span {
-    background: url(images/dropdown.png) no-repeat right center #ffffff;
+    background: asset_url('dropdown.png') no-repeat right center #ffffff;
     border-color: #fff;
   }
 
@@ -2754,7 +2754,7 @@ div.cs-skin-overlay {
 
   li {
     &.cs-optgroup li span:hover, &.cs-focus span, &.cs-selected span {
-      background: url(images/select_bullet_active.png) no-repeat right center;
+      background: asset_url('select_bullet_active.png') no-repeat right center;
     }
   }
 }

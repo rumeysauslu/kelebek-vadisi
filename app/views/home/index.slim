@@ -1,0 +1,63 @@
+.swiper-container.swiper-init data-effect="slide" data-pagination=".swiper-pagination" data-paginationclickable="true" data-parallax="true" 
+  .swiper-wrapper
+    .swiper-slide
+      img alt="" src="images/slider/slide3.jpg" title="" /
+      .slider-caption
+        h2 data-swiper-parallax="-100%"  FRESH STYLE
+        span.subtitle data-swiper-parallax="-60%"  WEB AND NATIVE
+        p data-swiper-parallax="-30%"  You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality.
+    .swiper-slide
+      img alt="" src="images/slider/slide2.jpg" title="" /
+    .swiper-slide
+      img alt="" src="images/slider/slide1.jpg" title="" /
+.swiper-pagination
+nav.main-nav
+  ul
+    li
+      a href="index.html"
+        =image_tag('icons/white/home.png')
+        span HOME
+    li
+      a.open-panel data-panel="right" href="#"
+        =image_tag('icons/white/user.png')
+        span ABOUT
+    /li
+      a href="features.html" 
+        img alt="" src="images/icons/white/settings.png" title="" /
+        span FEATURES
+    /li
+      a href="blog.html" 
+        img alt="" src="images/icons/white/blog.png" title="" /
+        span JOURNAL
+    /li
+      a href="photos.html" 
+        img alt="" src="images/icons/white/photos.png" title="" /
+        span PHOTOS
+    li
+      a href="videos.html" 
+        =image_tag('icons/white/video.png')
+        span VIDEOS
+    /li
+      a href="shop.html" 
+        img alt="" src="images/icons/white/shop.png" title="" /
+        span SHOP
+    /li
+      a href="cart.html"
+        img alt="" src="images/icons/white/cart.png" title="" /
+        span CART
+    li
+      a.open-popup data-popup=".popup-social" href="#"
+        =image_tag('icons/white/twitter.png')
+        span SOCIAL
+    li
+      a.open-popup data-popup=".popup-login" href="#" 
+        =image_tag('icons/white/lock.png')
+        span LOGIN
+    /li
+      a.open-panel data-panel="right" href="#" 
+        img alt="" src="images/icons/white/users.png" title="" /
+        span MY ACCOUNT
+    li
+      a href="contact.html" 
+        =image_tag('icons/white/message.png')
+        span CONTACT

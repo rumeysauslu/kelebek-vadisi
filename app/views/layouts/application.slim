@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Kelebek Vadisi
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" name="viewport" /
+    meta content="yes" name="apple-mobile-web-app-capable" /
+    meta content="black" name="apple-mobile-web-app-status-bar-style" /
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    =yield :css
+  body#mobile_wrap
+    =render 'layouts/shared/side-menu'
+    =render 'layouts/shared/account-menu'
+    .statusbar-overlay
+    .panel-overlay
+    .views
+      .view.view-main
+        .pages
+          .page.homepage data-page="index" 
+            .page-content.homepagecontent
+              .homenavbar
+                h1
+                  span kelebek
+                  | vadisi
+                a.open-panel data-panel="left" href="#" 
+                  .navbar_right
+                    =image_tag('icons/white/menu.png')
+              =yield 
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
