@@ -1,0 +1,10 @@
+.content-block
+  h4 GİRİŞ
+  .loginform
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.email_field :email, required: true, autofocus: true, input_html: { autocomplete: "email" }, class: 'form_input required'
+      = f.password_field :password, required: true, input_html: { autocomplete: "current-password" }, class: 'form_input required'
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      .form-actions
+        = f.button :submit, 'Giriş Yap', class: 'submit form_submit'
+    = render 'devise/shared/links'

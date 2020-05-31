@@ -2,21 +2,21 @@
   nav.sidebar-nav
     ul
       li
-        a.close-panel href="index.html" 
+        =link_to root_path, class: 'close-panel link external'
           =image_tag('icons/white/home.png')
-          span Home
+          span ANASAYFA
       li
         a.close-panel href="about.html" 
           =image_tag('icons/white/mobile.png')
-          span About
+          span HAKKIMIZDA
       li
         a.close-panel href="features.html" 
           =image_tag('icons/white/features.png')
-          span Features
+          span ANKET
       li
         a.open-popup.close-panel data-popup=".popup-login" href="#"
           =image_tag('icons/white/lock.png')
-          span Login
+          span GİRİŞ YAP
       /li
         a.close-panel href="team.html" 
           =image_tag()
@@ -33,7 +33,7 @@
       li
         a.close-panel href="videos.html"
           =image_tag('icons/white/video.png')
-          span Videos
+          span CANLI İZLE
       /li
         a.close-panel href="music.html" 
           img alt="" src="images/icons/white/music.png" title="" /
