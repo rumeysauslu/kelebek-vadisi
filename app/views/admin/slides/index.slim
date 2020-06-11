@@ -1,0 +1,35 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-paperclip
+        =t('.card_header')
+        =link_to new_admin_slide_path, class: 'btn btn-sm btn-success float-right' do
+          i.fa.fa-plus
+          |&nbsp;#{t('.new_slide_link')}
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.sequence')
+              th =t('.title')
+              th =t('.image')
+              th =t('.is_active')
+              th #
+          tbody
+            -@slides.each do |slide|
+              tr
+                td =slide.sequence
+                td =slide.title
+                td =image_tag(slide.image_url(:thumb))
+                td =status slide.is_active
+                td
+                  =link_to_edit edit_admin_slide_path(slide)
+                  |&nbsp;
+                  =link_to_destroy admin_slide_path(slide)
+                  |&nbsp;
+                  =link_to admin_slide_active_path(slide), method: :post, class: 'btn btn-sm btn-success' do
+                    |&nbsp;
+                    ="#{slide.is_active ? 'Pasif' : 'Aktif'} Yap"
+

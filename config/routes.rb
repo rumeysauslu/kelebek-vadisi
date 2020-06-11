@@ -23,6 +23,9 @@ Rails.application.routes.draw do
       resources :announcements do
         post '/active', to: 'announcements#set_active', as: 'active'
       end
+      resources :slides do
+        post '/active', to: 'slides#set_active', as: 'active'
+      end
     end
     resources :survey_results, only:[:new,:create]
     get '/duyurular', to: 'announcements#index', as: 'announcements'

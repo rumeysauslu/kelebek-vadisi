@@ -1,0 +1,23 @@
+tr:
+  activerecord:
+    models:
+      slide: Çocuk
+    attributes:
+      slide: &slide_attributes
+        id: Id
+        title: Başlık
+        detail: Açıklama
+        sequence: Sırası
+        image: Görsel
+        is_active: Aktiflik Durumu
+
+  admin:
+    slides:
+      index:
+        <<: *slide_attributes
+        card_header: Slaytlar
+        new_slide_link: Yeni Slayt Ekle
+      edit:
+        title: Slaytı Düzenle
+      new:
+        title: Yeni Slayt Ekle

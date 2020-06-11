@@ -1,0 +1,7 @@
+=simple_form_for @slide, url: path do |f|
+  =f.input :title
+  =f.input :detail
+  =f.input :image
+  =f.input :is_active
+  =f.input :sequence
+  =f.submit t('save'), class: 'btn btn-primary'

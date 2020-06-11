@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_31_132202) do
+ActiveRecord::Schema.define(version: 2020_06_11_114332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,16 @@ ActiveRecord::Schema.define(version: 2020_05_31_132202) do
     t.datetime "updated_at", null: false
     t.boolean "is_active", default: false
     t.index ["child_id"], name: "index_sessions_on_child_id"
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.boolean "is_active", default: false
+    t.integer "sequence", default: 0
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subscriptions", force: :cascade do |t|

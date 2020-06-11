@@ -1,15 +1,13 @@
 .swiper-container.swiper-init data-effect="slide" data-pagination=".swiper-pagination" data-paginationclickable="true" data-parallax="true" 
   .swiper-wrapper
-    .swiper-slide
-      img alt="" src="images/slider/slide3.jpg" title="" /
-      .slider-caption
-        h2 data-swiper-parallax="-100%"  FRESH STYLE
-        span.subtitle data-swiper-parallax="-60%"  WEB AND NATIVE
-        p data-swiper-parallax="-30%"  You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality.
-    .swiper-slide
-      img alt="" src="images/slider/slide2.jpg" title="" /
-    .swiper-slide
-      img alt="" src="images/slider/slide1.jpg" title="" /
+    -@slides.each do |slide|
+      .swiper-slide
+        =image_tag slide.image_url
+        .slider-caption
+          h2 data-swiper-parallax="-100%"  Kelebek Vadisi
+          span.subtitle data-swiper-parallax="-60%"  =slide.title
+          p data-swiper-parallax="-30%"  =slide.detail
+      
 .swiper-pagination
 nav.main-nav
   ul
