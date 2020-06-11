@@ -20,7 +20,11 @@ Rails.application.routes.draw do
       resources :movements, only: [:index]
       resources :sessions, only: [:index]
       resources :surveys
+      resources :announcements do
+        post '/active', to: 'announcements#set_active', as: 'active'
+      end
     end
     resources :survey_results, only:[:new,:create]
+    get '/duyurular', to: 'announcements#index', as: 'announcements'
   end
 end

@@ -1,0 +1,19 @@
+.pages
+  .page.no-navbar data-page="features" 
+    .page-content
+      .navbarpages
+        a.open-panel data-panel="left" href="#" 
+        .navbar_right
+          img alt="" src="images/icons/green/menu.png" title="" /
+      #pages_maincontent
+        h2.page_title DUYURULAR
+        .page_single.layout_fullwidth_padding.toolbarpage
+          -@announcements.each do |ann|
+            ul.features_list_detailed
+              li.bg1
+                .feat_small_details
+                  h4 
+                    =ann.title
+                  h6
+                    =time_tag ann.created_at.to_date
+                  =ann.body

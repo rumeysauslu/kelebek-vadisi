@@ -1,0 +1,34 @@
+.row
+  .col-lg-12
+    .card
+      .card-header
+        i.fa.fa-file-alt
+        =t('.card_header')
+        =link_to new_admin_announcement_path, class: 'btn btn-sm btn-success float-right' do
+          i.fa.fa-plus
+          |&nbsp;#{t('.new_announcement_link')}
+      
+      .card-body
+        table.table.table-responsive-sm.table-striped
+          thead
+            tr
+              th =t('.title')
+              th =t('.body')
+              th =t('.is_active')
+              th =t('.created_at')
+              th #
+          tbody
+            -@announcements.each do |ann|
+              tr
+                td =ann.title
+                td =ann.body
+                td =status ann.is_active
+                td =time_tag ann.created_at
+                td
+                  =link_to_edit edit_admin_announcement_path(ann)
+                  |&nbsp;
+                  =link_to_destroy admin_announcement_path(ann)
+                  |&nbsp;
+                  =link_to admin_announcement_active_path(ann), method: :post, class: 'btn btn-sm btn-success' do
+                    |&nbsp;
+                    ="#{ann.is_active ? 'Pasif' : 'Aktif'} Yap"

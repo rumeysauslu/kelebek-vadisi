@@ -1,0 +1,22 @@
+tr:
+  activerecord:
+    models:
+      announcement: Çocuk
+    attributes:
+      announcement: &announcement_attributes
+        id: Id
+        title: Başlık
+        body: Açıklama
+        is_active: Aktiflik Durumu
+        created_at: Oluşturulma Zamanı
+
+  admin:
+    announcements:
+      index:
+        <<: *announcement_attributes
+        card_header: Duyurular
+        new_announcement_link: Yeni Duyuru Ekle
+      edit:
+        title: Duyuruyu Düzenle
+      new:
+        title: Yeni Duyuru Ekle
